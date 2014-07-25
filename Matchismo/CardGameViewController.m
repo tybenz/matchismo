@@ -43,13 +43,6 @@
         [sender setBackgroundImage:[UIImage imageNamed:@"cardfront"]
                           forState:UIControlStateNormal];
 
-        // Display contents red (hearts & diamonds) vs black (spades & clubs)
-        if ([@[@"♥", @"♦"] containsObject:((PlayingCard *)card).suit]) {
-            [sender setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-        } else {
-            [sender setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        }
-
         [sender setTitle:card.contents forState:UIControlStateNormal];
     }
     self.flipCount++;
